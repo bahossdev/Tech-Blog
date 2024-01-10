@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Sequelize and Scalability",
+    "description": "Sequelize, a robust ORM for Node.js, streamlines database management. Define models, conduct queries – Sequelize simplifies the process, ensuring seamless integration with MVC architecture for scalable web applications.",
+    "date_created": "March 30, 2022"
+  },
+  {
+    "title": "Quick Fix: Data Length in MySQL!",
+    "description": "Facing MySQL's 'Data too long for column' issue? Analyze the 'description' column's length in your schema. Modify the length or truncate data to fit within limits for a swift resolution.",
+    "date_created": "May 13, 2023"
+  },
+  {
+    "title": "MVC meets Sequelize: Coding Harmony",
+    "description": "Marrying MVC architecture with Sequelize creates a coding symphony. MVC organizes, Sequelize simplifies database tasks – a powerful combo for building maintainable and scalable applications effortlessly.",
+    "date_created": "July 02, 2022"
+  },
+  {
+    "title": "Harmony in Development: MVC and Sequelize in Sync",
+    "description": "The combination of MVC architecture and Sequelize creates a harmonious development environment. MVC ensures structured code, while Sequelize simplifies database interactions, allowing developers to build scalable and maintainable applications with ease.",
+    "date_created": "December 14, 2021"
+  }
+]
