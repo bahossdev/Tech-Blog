@@ -1,9 +1,15 @@
 <div class="text-left blog">
+  <!-- Display Blog Title -->
   <h2>{{title}}</h2>
+
+  <!-- Display Blog Description -->
   <p>{{description}}</p>
+
+  <!-- Display Author and Creation Date -->
   <p class="text-right author">Created by {{user.name}} on {{format_date date_created}}</p>
   
   {{#if logged_in}}
+  <!-- Comment Form for Logged-in Users -->
   <form class="form comment-form">
     <div class="form-group">
       <label for="comment">Your Comment:</label>
@@ -15,17 +21,29 @@
   </form>
   {{/if}}
 </div>
+
 <div class="comment-card">
+  <!-- Section for Displaying Comments -->
   <h4>Comments</h4>
   
   {{#unless logged_in}}
+  <!-- Message for Non-Logged-in Users -->
   <p>Please login or sign-up to leave a comment:</p>
   <a href="/login"><button class="btn btn-primary cta-button" type="submit">Login or Sign-up</button></a>
   {{/unless}}
 
   {{#each comments as |comment|}}
+  <!-- Display Each Comment -->
+  <p id="comments">{{comment.comment}} </p>
+  <p class="text-right author"> Commented by {{comment.user.name}} on {{format_date comment.date_created}}</p>
+  {{/each}}
+
+  <!-- Example Comments (replace with actual comments) -->
+  {{#each exampleComments as |comment|}}
   <p id="comments">{{comment.comment}} </p>
   <p class="text-right author"> Commented by {{comment.user.name}} on {{format_date comment.date_created}}</p>
   {{/each}}
 </div>
+
+<!-- Include Blog JavaScript -->
 <script src="/js/blog.js"></script>

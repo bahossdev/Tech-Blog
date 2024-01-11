@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Blog, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-
+//Get a single blogpost
 router.get('/:id', withAuth, async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id);
@@ -16,6 +16,7 @@ router.get('/:id', withAuth, async (req, res) => {
   }
 });
 
+//Create new blogpost
 router.post('/', withAuth, async (req, res) => {
   try {
     const newBlog = await Blog.create({
@@ -29,6 +30,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+//Update a blogpost
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const blogData = await Blog.update(req.body, {
@@ -49,6 +51,7 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 })
 
+//Delete a blogpost
 router.delete('/:id', async (req, res) => {
   try {
     const blogData = await Blog.destroy({
@@ -69,7 +72,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-
+//Post a comment
 router.post('/comment', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({

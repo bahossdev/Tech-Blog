@@ -1,11 +1,13 @@
 <div class="row">
   <div class="col-auto">
+    <!-- Greet the user by name -->
     <h2>Hi, {{name}}! 👋🏼 </h2>
   </div>
 </div>
 
 <div class="row mt-4">
   <div class="col-md-6">
+    <!-- Form for creating a new blog post -->
     <h3>Write a New Blog Post:</h3>
 
     <form class="form new-blog-form">
@@ -27,14 +29,17 @@
 
   {{#if blogs.length}}
   <div class="col-md-6 blog-list">
+    <!-- Display current blogs if available -->
     <h3>Current Blogs:</h3>
 
     {{#each blogs as |blog|}}
     <div class="row mb-2">
       <div class="col-md-8">
+        <!-- Link to the blog with its title -->
         <h4><a class="list" href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
       </div>
       <div class="col-md-4">
+        <!-- Buttons for updating and deleting a blog -->
         <button class="btn btn-sm" update="{{blog.id}}">Update</button>
         <button class="btn btn-sm btn-danger" delete="{{blog.id}}">Delete</button>
       </div>
@@ -44,4 +49,5 @@
   {{/if}}
 </div>
 
+<!-- Include JavaScript for dashboard functionality -->
 <script src="./js/dashboard.js"></script>

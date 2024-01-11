@@ -1,3 +1,4 @@
+//Event Handler for creating a new blogpost
 const newFormHandler = async (event) => {
   event.preventDefault();
   const id = event.target.getAttribute('id');
@@ -23,6 +24,7 @@ const newFormHandler = async (event) => {
   }
 };
 
+//Event Handler for updating a blogpost
 const updateButtonHandler = async (event) => {
   if (event.target.hasAttribute('update')) {
     const id = event.target.getAttribute('update');
@@ -40,6 +42,7 @@ const updateButtonHandler = async (event) => {
   };
 }
 
+//Event Handler for deleting a blogpost
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('delete')) {
     const id = event.target.getAttribute('delete');

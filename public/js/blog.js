@@ -1,3 +1,4 @@
+//Event Handler for posting comments
 const commentHandler = async (event) => {
     event.preventDefault();
     const url = location.href;
