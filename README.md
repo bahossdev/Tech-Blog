@@ -23,6 +23,7 @@ Tech Blog CMS is a content management system tailored for tech enthusiasts. Seam
 - [Deployment](#deployment)
 - [Repository](#repository)
 - [Questions](#questions)
+- [Screenshots](#screenshots)
 
 ## Features
 
@@ -53,7 +54,7 @@ Follow these steps to set up and use the Tech Blog CMS on your local machine:
 Now, you're ready to run your Tech Blog CMS locally.
 
 ## How to Use
-You can simply visit the deployed page on [heroku](#deployment) or if you'd like to run it on your local machine, follow the steps below:
+You can visit the deployed page on [heroku](#deployment) or if you'd like to run it on your local machine, follow the steps below:
 
 1. Ensure the application is running by executing `npm start`.
 2. Open your web browser and navigate to `http://localhost:3001`.
@@ -66,7 +67,7 @@ The Tech Blog CMS was developed with insights from various educational resources
 
 ## License
 
-Please refer to the licsense in the repository for detailed information on the license governing this project.
+Please refer to the license in the repository for detailed information on the license governing this project.
 
 ## Deployment:
 - [Deployed app on Heroku](https://radiant-mountain-13758-93f137cc5226.herokuapp.com)
@@ -78,3 +79,14 @@ Please refer to the licsense in the repository for detailed information on the l
 ## Questions
 
 If you have any questions or need further assistance, feel free to reach out to me by [email](mailto:bahoss.dev@gmail.com).
+
+## Screenshots:
+* Homepage:
+  ![screenshot](https://github.com/bahossdev/Tech-Blog/assets/148646212/1828288a-7101-4b68-9250-c5aa57512021)
+* User Dashboard:
+  ![screenshot2](https://github.com/bahossdev/Tech-Blog/assets/148646212/14220c56-b8bc-4cf9-8f76-e376d3664425)
+* Commenting on blogposts:
+  ![screenshot3](https://github.com/bahossdev/Tech-Blog/assets/148646212/fedc79e0-4ba6-4846-961f-ef637526bb4c)
+
+
+
