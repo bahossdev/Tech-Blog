@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,400;0,700;1,100;1,600;1,700&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Foldit&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -17,7 +18,7 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <a href="/">Tech Blog</a>
+        <a class="page-title" href="/">Tech Blog</a>
       </h1>
       <nav>
         <a href="/dashboard">Dashboard</a> |
@@ -35,7 +36,6 @@
 
     </footer>
   </div>
-
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}

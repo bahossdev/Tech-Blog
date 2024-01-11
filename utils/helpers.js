@@ -4,7 +4,6 @@ module.exports = {
     return date.toLocaleDateString();
   },
   format_amount: (amount) => {
-    // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
   get_emoji: () => {
@@ -12,7 +11,7 @@ module.exports = {
 
     // Return a random emoji
     if (randomNum > 0.7) {
-      return `<span for="img" aria-label="monitor">🖥️</span>`;
+      return `<span for="img" aria-label="monitor">📱</span>`;
     } else if (randomNum > 0.4) {
       return `<span for="img" aria-label="laptop">💻</span>`;
     } else {

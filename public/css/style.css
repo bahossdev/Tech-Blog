@@ -3,9 +3,16 @@ header {
   background-color: #044404;
   color: whitesmoke;
 }
+
+.page-title {
+  font-family: 'Foldit', sans-serif;
+  font-size: 5rem;
+  text-shadow: 2px 4px 4px rgb(206, 240, 205);
+  margin-left: 35px;
+}
  
 .blog {
-  background-color: #b0d6b0;
+  background-color: #c7e3c7;
   border: 2px dashed #084b41;
   color: rgb(42, 22, 67);
   padding: 25px;
@@ -17,12 +24,18 @@ header {
   color: #084b41;
 }
 
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+}
+
 .no-button {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: #de72ea;
   text-decoration: none;
   font-size: 100%;
 }
@@ -37,4 +50,24 @@ header {
   font-family: 'Genos', sans-serif;
   font-size: 1.5rem;
   font-weight:500;
+}
+
+.list {
+  color: #084b41;
+}
+
+.comment-card {
+  margin-top: 30px;
+  border: 2px dashed #084b41;
+  color: rgb(42, 22, 67);
+  padding: 25px;
+  border-radius: 15px;
+  background-color: rgb(233, 230, 230)
+}
+
+#comments {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin-top: 40px;
+  font-family: monospace;
 }

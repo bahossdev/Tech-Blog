@@ -1,6 +1,20 @@
 const router = require('express').Router();
-const { Blog } = require('../../models');
+const { Blog, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+
+router.get('/:id', withAuth, async (req, res) => {
+  try {
+    const blogData = await Blog.findByPk(req.params.id);
+    if (!blogData) {
+      res.status(404).json({ message: 'Blog post not found' });
+      return;
+    } res.status(200).json(blogData);
+  } catch (error) {
+    console.error('Error retrieving blog post:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -15,11 +29,10 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.put('/:id', withAuth, async (res, req) =>{
+router.put('/:id', withAuth, async (req, res) => {
   try {
-    const blogData = await Blog.update({
+    const blogData = await Blog.update(req.body, {
       where: {
-        ...req.body,
         id: req.params.id,
         user_id: req.session.user_id,
       },
@@ -56,4 +69,18 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+
+router.post('/comment', withAuth, async (req, res) => {
+  try {
+    const newComment = await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+    console.log(newComment)
+    res.status(200).json(newComment);
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
+});
 module.exports = router;
